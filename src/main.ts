@@ -85,15 +85,19 @@ void (async () => {
 
   if (config.rules) {
     const results = await Promise.all(
-      config.rules.map(async ({ valid, name, message, type }, index) => {
-        let validResult = false;
+      config.rules.map(async ({ valid, name, message, type, target }, index) => {
+        let validResult = false,
+          targetContent = relevantContent;
+
+        if (target === 'title') targetContent = title;
+        else if (target === 'body') targetContent = body;
 
         if (typeof valid === 'string')
           validResult =
             type === 'regex'
-              ? new RegExp(valid).test(relevantContent)
-              : relevantContent.includes(valid);
-        else if (valid instanceof RegExp) validResult = valid.test(relevantContent);
+              ? new RegExp(valid).test(targetContent)
+              : targetContent.includes(valid);
+        else if (valid instanceof RegExp) validResult = valid.test(targetContent);
         else if (typeof valid === 'function')
           validResult = await valid({
             raw: relevantContent,
