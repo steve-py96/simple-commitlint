@@ -66,7 +66,7 @@ Create a `simple-commitlintrc.js` f.e. like this
 
 ### husky
 
-Most likely you'll use this with [husky](https://github.com/typicode/husky). For that purpose setup husky and run `npx husky add .husky/commit-msg "npx --no-install simple-commitlint --git $1"` (pretty similar to the original [commitlint](https://github.com/conventional-changelog/commitlint/)).
+Most likely you'll use this with [husky](https://github.com/typicode/husky). For that purpose setup husky and run `npx husky add .husky/commit-msg "npx --no-install simple-commitlint --git $1"` (pretty similar to the use of husky with the original [commitlint](https://github.com/conventional-changelog/commitlint/)).
 
 <br />
 
