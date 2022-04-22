@@ -2,6 +2,11 @@
 
 # simple-commitlint
 
+commitlint, but in simpler ✨
+
+<br />
+<br />
+
 ## how to use
 
 1. `npm i -D simple-commitlint` / `yarn -D simple-commitlint`
