@@ -1,0 +1,12 @@
+.editorconfig
+.gitignore
+.nvmrc
+.prettierrc
+tsconfig.json
+dist/
+src/
+node_modules/
+*.tgz
+!*.js
+!*.d.ts
+types.js

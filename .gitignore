@@ -1,0 +1,8 @@
+*.tgz
+*.js
+*.d.ts
+*.tgz
+dist/
+!src/
+node_modules/
+*.log
