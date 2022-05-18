@@ -85,7 +85,7 @@ defineConfig({
   rules: [
     {
       name: 'head-not-empty',
-      validate({ title }) {
+      valid({ title }) {
         return title.length > 0;
       },
     },
@@ -103,7 +103,7 @@ defineConfig({
   rules: [
     {
       name: 'body-not-directly-under-head',
-      validate({ body }) {
+      valid({ body }) {
         return body.split('\n')[0].trim().length === 0;
       },
     },
@@ -121,7 +121,7 @@ defineConfig({
   rules: [
     {
       name: 'jira',
-      validate({ title }) {
+      valid({ title }) {
         return /^[A-Z]+-\d+ ?(?:\/\/?|:) ?[^\/ ].*$/.test(title);
       },
     },
@@ -145,7 +145,7 @@ defineConfig({
   rules: [
     {
       name: 'special-case',
-      validate({ title, cli }) {
+      valid({ title, cli }) {
         if (cli.split('\n').some((path) => path.endsWith('fileABC.ts')))
           return /someSpecialTest/.test(title);
 
