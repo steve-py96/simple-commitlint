@@ -9,7 +9,7 @@ commitlint, but in simpler ✨
 
 ## how to use
 
-1. `npm i -D simple-commitlint` / `yarn -D simple-commitlint`
+1. `npm i -D simple-commitlint` / `yarn add -D simple-commitlint`
 2. create a config file `simple-commitlintrc` with one of the following extensions: `js`, `ts`, `mjs`, `json`, `yml`/`yaml`
 
 <br />
